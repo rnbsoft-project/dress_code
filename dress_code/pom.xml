@@ -13,7 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>dress_code</name>
-	<description>Demo project for Spring Boot</description>
+	<description>dress_code project for Spring Boot</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -52,6 +52,15 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- 내장 톰캣 사용할 때, jsp를 인식할 jasper 추가 -->
+		<!-- 리눅스 서버의 Tomcat으로 War파일 배포할때는 주석처리 필수 -->
+		<!-- Version 딱히 필요 없어서 삭제-->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
