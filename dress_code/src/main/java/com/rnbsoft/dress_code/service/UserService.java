@@ -13,11 +13,13 @@ public class UserService {
     @Autowired
     private UserMapper userMapper;
 
-    UserDTO users = new UserDTO();
+    // 유저 회원가입
+    public void userJoin(UserDTO userDTO) {
+        userMapper.userJoin(userDTO);
+    }
 
     // 유저 정보 호출
     public List<UserDTO> selectAllUsers(){
-        System.out.println("서비스까지 호출");
         List<UserDTO> usersList = userMapper.selectAllUsers();
         return usersList;
     }

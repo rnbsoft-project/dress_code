@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.rnbsoft.dress_code.mapper.UserMapper">
+        <select id="selectAllUsers" resultType="com.rnbsoft.dress_code.dto.UserDTO">
+            SELECT USER_NAME                    /* 유저이름 */
+                        , USER_ID                          /* 유저아이디 */
+                        , USER_PASSWORD           /* 유저비밀번호 */
+                        , USER_EMAIL                    /* 유저이메일 */
+                        , USER_ADDR                     /* 유저주소 */
+               FROM TB_USERS
+        </select>
+
+        <!-- 유저 회원가입 -->
+        <insert id="userJoin" parameterType="com.rnbsoft.dress_code.dto.UserDTO">
+            INSERT INTO TB_USERS(
+                    USER_NAME
+                  , USER_ID
+                  , USER_PASSWORD
+                  , USER_EMAIL
+                  , USER_MOV_TEL
+                  , USER_ADDR
+            ) VALUES(
+                     #{userName}
+                   , #{userId}
+                   , #{userPassword}
+                   , #{userEmail}
+                   , #{userMovTel}
+                   , #{userAddr}
+            )
+        </insert>
+</mapper>
