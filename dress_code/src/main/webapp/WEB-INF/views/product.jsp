@@ -72,27 +72,20 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3 col-xs-2">
-					<div id="fh5co-logo"><a href="/">Shop.</a></div>
+					<div id="fh5co-logo"><a href="/">DRESS_CODE</a></div>
 				</div>
 				<div class="col-md-6 col-xs-6 text-center menu-1">
 					<ul>
+						<li class="active"><a href="login">로그인</a></li>
+						<li class="active"><a href="join">회원가입</a></li>
 						<li class="has-dropdown">
-							<a href="product.html">Shop</a>
+							<a href="product">상품</a>
 							<ul class="dropdown">
-								<li><a href="single">Single Shop</a></li>
+								<li><a href="single">상의</a></li>
+								<li><a href="single">하의</a></li>
+								<li><a href="single">신발</a></li>
 							</ul>
 						</li>
-						<li><a href="about">About</a></li>
-						<li class="has-dropdown">
-							<a href="services">Services</a>
-							<ul class="dropdown">
-								<li><a href="#">Web Design</a></li>
-								<li><a href="#">eCommerce</a></li>
-								<li><a href="#">Branding</a></li>
-								<li><a href="#">API</a></li>
-							</ul>
-						</li>
-						<li><a href="contact">Contact</a></li>
 					</ul>
 				</div>
 				<div class="col-md-3 col-xs-4 text-right hidden-xs menu-2">
@@ -109,7 +102,7 @@
 					</ul>
 				</div>
 			</div>
-			
+
 		</div>
 	</nav>
 
@@ -290,33 +283,6 @@
 			</div>
 		</div>
 	</div>
-
-	<div id="fh5co-started">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Newsletter</h2>
-					<p>Just stay tune for our latest Product. Now you can subscribe</p>
-				</div>
-			</div>
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2">
-					<form class="form-inline">
-						<div class="col-md-6 col-sm-6">
-							<div class="form-group">
-								<label for="email" class="sr-only">Email</label>
-								<input type="email" class="form-control" id="email" placeholder="Email">
-							</div>
-						</div>
-						<div class="col-md-6 col-sm-6">
-							<button type="submit" class="btn btn-default btn-block">Subscribe</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
 			<div class="row row-pb-md">

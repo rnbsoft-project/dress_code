@@ -19,10 +19,18 @@ public class UserController {
     @Autowired
     UserService userService;
 
+    // 로그인화면 이동
+    @GetMapping("login")
+    public String getLogin() {
+        return "login";
+    }
+
+    // 회원가입 화면 이동
     @GetMapping("/join")
     public String getJoin() {
         return "join";
     }
+
     @PostMapping("/userSave")
     @ResponseBody
     public void getJoin(@RequestBody UserDTO userDTO) {

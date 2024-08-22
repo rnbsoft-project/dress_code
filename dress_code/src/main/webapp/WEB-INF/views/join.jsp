@@ -52,27 +52,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-xs-2">
-                    <div id="fh5co-logo"><a href="/">Shop.</a></div>
+                    <div id="fh5co-logo"><a href="/">DRESS_CODE</a></div>
                 </div>
                 <div class="col-md-6 col-xs-6 text-center menu-1">
                     <ul>
+                        <li class="active"><a href="login">로그인</a></li>
+                        <li class="active"><a href="join">회원가입</a></li>
                         <li class="has-dropdown">
-                            <a href="product">Shop</a>
+                            <a href="product">상품</a>
                             <ul class="dropdown">
-                                <li><a href="single">Single Shop</a></li>
+                                <li><a href="single">상의</a></li>
+                                <li><a href="single">하의</a></li>
+                                <li><a href="single">신발</a></li>
                             </ul>
                         </li>
-                        <li><a href="about">About</a></li>
-                        <li class="has-dropdown">
-                            <a href="services">Services</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Web Design</a></li>
-                                <li><a href="#">eCommerce</a></li>
-                                <li><a href="#">Branding</a></li>
-                                <li><a href="#">API</a></li>
-                            </ul>
-                        </li>
-                        <li class="active"><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-xs-4 text-right hidden-xs menu-2">
