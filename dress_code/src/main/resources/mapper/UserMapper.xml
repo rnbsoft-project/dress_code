@@ -13,7 +13,7 @@
         </select>
 
         <!-- 유저 회원가입 -->
-        <insert id="userJoin" parameterType="com.rnbsoft.dress_code.dto.UserDTO">
+        <insert id="userSave" parameterType="com.rnbsoft.dress_code.dto.UserDTO">
             INSERT INTO TB_USERS(
                     USER_NAME
                   , USER_ID

@@ -9,16 +9,15 @@ import java.util.List;
 @Service
 public class UserService {
 
-    // @Autowired 대신 객체 생성으로 대체 ( 강한 결합은 권장하지 않음 )
     @Autowired
     private UserMapper userMapper;
 
     // 유저 회원가입
-    public void userJoin(UserDTO userDTO) {
-        userMapper.userJoin(userDTO);
+    public void userSave(UserDTO userDTO) {
+        userMapper.userSave(userDTO);
     }
 
-    // 유저 정보 호출
+    // 모든 유저 정보 조회
     public List<UserDTO> selectAllUsers(){
         List<UserDTO> usersList = userMapper.selectAllUsers();
         return usersList;

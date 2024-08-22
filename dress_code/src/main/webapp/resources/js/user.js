@@ -19,14 +19,7 @@ $(document).ready(function () {
                   , contentType : "application/json"
                   , data : JSON.stringify(userInfo)
                   , success : function (response) {
-                        alert("회원가입완료");
-                        console.log(response.data.userName + "," +
-                                            response.data.userId + "," +
-                                            response.data.userPassword + "," +
-                                            response.data.userEmail + "," +
-                                            response.data.userMovTel + "," +
-                                            response.data.userAddr)
-                        alert("회원가입을 성공 했습니다.");
+                        window.location.href="login";
                   }
             })
     });

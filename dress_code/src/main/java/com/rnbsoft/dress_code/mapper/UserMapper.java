@@ -14,5 +14,5 @@ public interface UserMapper {
     List<UserDTO> selectAllUsers();
 
     // 유저 회원가입
-    void userJoin(UserDTO userDTO);
+    void userSave(UserDTO userDTO);
 }
