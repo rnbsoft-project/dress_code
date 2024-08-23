@@ -65,11 +65,12 @@ public class UserController {
         if(requestUserId.equals(userId) && requestUserPassword.equals(userPassword)) {
             // 로그인 성공 시, HOME 페이지로 이동
             session.setAttribute("userName", userName);
+            ModelAndView model = new ModelAndView();
+            model.addObject("userName", userName);
             return new ModelAndView("redirect:/");
         } else {
             // 로그인 실패 시, 로그인 페이지로 이동
             ModelAndView model = new ModelAndView("loginForm");
-            model.addObject("userName", userName);
             model.addObject("loginError", true);
             return model;
         }
