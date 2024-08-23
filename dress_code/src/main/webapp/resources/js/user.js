@@ -6,7 +6,6 @@ $(document).ready(function () {
 
     // 유저 회원가입 하기
     saveUser();
-
 });
 
 // 유저 회원가입 메소드

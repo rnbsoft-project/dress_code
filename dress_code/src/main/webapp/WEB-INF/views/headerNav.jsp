@@ -8,30 +8,31 @@
 <nav class="fh5co-nav" role="navigation">
     <div class="container">
         <div class="row">
-            <div class="col-md-3 col-xs-2" style="width: 30%">
+            <div class="col-md-3 col-xs-2" style="width: 40%">
                 <div id="fh5co-logo">
                     <ul>
                         <a href="/">DRESS_CODE</a>
                         <% if (session.getAttribute("userName") != null) {%>
                             <li class="active" style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif;">
                                 <form action="logout" method="post">
-                                    <button class="btn btn-primary" type="submit">로그아웃</button>
+                                    <span style="font-size: 14px;">${userName}님</span>
+                                    <button class="btn btn-primary" type="submit" style="height: 30px; font-size: 15px;  padding: 5px;">로그아웃</button>
                                 </form>
                             </li>
                         <%} else {%>
                             <li class="active" style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif;">
-                                <a href="loginForm">로그인</a>
+                                <a href="loginForm"><span style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif; font-size: 20px;">로그인</span></a>
                             </li>
                             <li class="active" style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif;">
-                                <a href="join">회원가입</a></li>
+                                <a href="join"><span style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif; font-size: 20px;">회원가입</span></a></li>
                         <%}%>
                     </ul>
                 </div>
             </div>
-            <div class="col-md-6 col-xs-6 text-center menu-1" style="width: 40%">
+            <div class="col-md-6 col-xs-6 text-center menu-1" style="width: 30%">
                 <ul>
                     <li class="has-dropdown">
-                        <a href="product">상품</a>
+                        <a href="product"><span style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif; font-size: 20px;">상품 목록</span></a>
                         <ul class="dropdown">
                             <li><a href="#">상의</a></li>
                             <li><a href="#">하의</a></li>

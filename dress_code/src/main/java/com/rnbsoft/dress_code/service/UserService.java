@@ -29,11 +29,7 @@ public class UserService {
 
     // 유저 로그인
     public Map<UserDTO, String> userLogin(String userId, String userPassword ) {
-
         Map<UserDTO, String> userMap = userMapper.userLogin(userId, userPassword);
-        System.out.println("유저 이름 : " + userMap.get("USER_ID"));
-        System.out.println("유저 아아디 : " + userMap.get("USER_ID"));
-        System.out.println("유저 비밀번호 : " + userMap.get("USER_PASSWORD"));
         return userMap;
     }
 
