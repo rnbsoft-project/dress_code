@@ -68,44 +68,7 @@
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">
-	<nav class="fh5co-nav" role="navigation">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3 col-xs-2">
-					<div id="fh5co-logo"><a href="/">DRESS_CODE</a></div>
-				</div>
-				<div class="col-md-6 col-xs-6 text-center menu-1">
-					<ul>
-						<li class="active"><a href="login">로그인</a></li>
-						<li class="active"><a href="join">회원가입</a></li>
-						<li class="has-dropdown">
-							<a href="product">상품</a>
-							<ul class="dropdown">
-								<li><a href="single">상의</a></li>
-								<li><a href="single">하의</a></li>
-								<li><a href="single">신발</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-				<div class="col-md-3 col-xs-4 text-right hidden-xs menu-2">
-					<ul>
-						<li class="search">
-							<div class="input-group">
-						      <input type="text" placeholder="Search..">
-						      <span class="input-group-btn">
-						        <button class="btn btn-primary" type="button"><i class="icon-search"></i></button>
-						      </span>
-						    </div>
-						</li>
-						<li class="shopping-cart"><a href="#" class="cart"><span><small>0</small><i class="icon-shopping-cart"></i></span></a></li>
-					</ul>
-				</div>
-			</div>
-
-		</div>
-	</nav>
-
+	<jsp:include page="headerNav.jsp" flush="false"/>
 	<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(/resources/images/img_bg_2.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
@@ -362,7 +325,6 @@
 	<script src="/resources/js/jquery.flexslider-min.js"></script>
 	<!-- Main -->
 	<script src="/resources/js/main.js"></script>
-
 	</body>
 </html>
 
