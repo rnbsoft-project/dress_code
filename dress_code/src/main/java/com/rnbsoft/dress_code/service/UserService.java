@@ -17,6 +17,15 @@ public class UserService {
         userMapper.userSave(userDTO);
     }
 
+    // 유저 회원가입 유효성 체크
+    public int userIdChk(String userId ) {
+        int check = userMapper.userIdChk(userId);
+        System.out.println(check);
+        return userMapper.userIdChk(userId);
+    }
+
+
+
     // 모든 유저 정보 조회
     public List<UserDTO> selectAllUsers(){
         List<UserDTO> usersList = userMapper.selectAllUsers();

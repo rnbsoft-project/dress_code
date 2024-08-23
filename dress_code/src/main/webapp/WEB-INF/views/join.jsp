@@ -124,6 +124,7 @@
                                 <input type="text" id="userId" class="form-control"
                                            style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif;"
                                            placeholder="아이디를 입력해주세요">
+                                <span id="userIdChk"></span>
                             </div>
                         </div>
 
@@ -133,6 +134,15 @@
                                 <input type="password" id="userPassword" class="form-control"
                                             style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif;"
                                             placeholder="비밀번호를 입력해주세요">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <!-- <label for="email">Email</label> -->
+                                <input type="password" id="userPasswordChk" class="form-control"
+                                       style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif;"
+                                       placeholder="비밀번호를 입력해주세요">
                             </div>
                         </div>
 

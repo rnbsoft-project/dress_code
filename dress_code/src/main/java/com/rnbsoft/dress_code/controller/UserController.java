@@ -5,10 +5,7 @@ import com.rnbsoft.dress_code.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @Slf4j
@@ -34,5 +31,12 @@ public class UserController {
     @ResponseBody
     public void userSave(@RequestBody UserDTO userDTO) {
         userService.userSave(userDTO);
+    }
+
+    // 회원가입 유효성 체크
+    @PostMapping("/userIdChk")
+    @ResponseBody
+    public int userJoinStatusChk(@RequestParam String userId) {
+        return userService.userIdChk(userId);
     }
 }

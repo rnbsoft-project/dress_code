@@ -15,4 +15,7 @@ public interface UserMapper {
 
     // 유저 회원가입
     void userSave(UserDTO userDTO);
+
+    // 유저 중복아이디 체크
+    int userIdChk(String userId);
 }
