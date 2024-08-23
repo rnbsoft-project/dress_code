@@ -12,12 +12,23 @@
                 <div id="fh5co-logo">
                     <ul>
                         <a href="/">DRESS_CODE</a>
-                        <li class="active" style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif;"><a href="login">로그인</a></li>
-                        <li class="active" style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif;"><a href="join">회원가입</a></li>
+                        <% if (session.getAttribute("userName") != null) {%>
+                            <li class="active" style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif;">
+                                <form action="logout" method="post">
+                                    <button class="btn btn-primary" type="submit">로그아웃</button>
+                                </form>
+                            </li>
+                        <%} else {%>
+                            <li class="active" style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif;">
+                                <a href="loginForm">로그인</a>
+                            </li>
+                            <li class="active" style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif;">
+                                <a href="join">회원가입</a></li>
+                        <%}%>
                     </ul>
                 </div>
             </div>
-            <div class="col-md-6 col-xs-6 text-center menu-1" style="width: 30%">
+            <div class="col-md-6 col-xs-6 text-center menu-1" style="width: 40%">
                 <ul>
                     <li class="has-dropdown">
                         <a href="product">상품</a>

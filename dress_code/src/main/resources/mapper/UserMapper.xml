@@ -20,4 +20,12 @@
         <select id="userIdChk" parameterType="string" resultType="int">
             SELECT COUNT(USER_ID) FROM TB_USERS WHERE USER_ID = #{userId}
         </select>
+
+        <!-- 유저 로그인 계정 확인 -->
+        <select id="userLogin" parameterType="string" resultType="hashmap">
+            SELECT USER_ID, USER_PASSWORD, USER_NAME
+               FROM TB_USERS
+             WHERE USER_ID = #{userId}
+                  AND USER_PASSWORD = #{userPassword}
+        </select>
 </mapper>

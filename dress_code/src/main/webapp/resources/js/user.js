@@ -6,12 +6,12 @@ $(document).ready(function () {
 
     // 유저 회원가입 하기
     saveUser();
+
 });
 
 // 유저 회원가입 메소드
 function saveUser() {
     $("#joinBtn").on("click", function() {
-        alert("회원가입 버튼을 클릭 했습니다.");
 
         var userInfo = {
             userName        : $("#userName").val()               /* 유저 이름 */
@@ -28,7 +28,7 @@ function saveUser() {
             , contentType : "application/json"
             , data : JSON.stringify(userInfo)
             , success : function (response) {
-                window.location.href="login";
+                window.location.href="loginForm";
             }
         })
     });
@@ -39,6 +39,12 @@ function userJoinStatusChk() {
 
     // 유저 중복 아이디 체크 시작
     userDuplicateId();
+
+    // 비밀번호 재 확인 체크 시작 미 구현
+
+    // 이메일 형식 ( 정규식 표현 ) 검사 미 구현
+
+    // 휴대폰 형식 ( 정규식 표현 ) 검사 미 구현
 }
 
 // 유저 중복 아이디 체크 함수
@@ -69,4 +75,3 @@ function userDuplicateId() {
         }
     });
 }
-

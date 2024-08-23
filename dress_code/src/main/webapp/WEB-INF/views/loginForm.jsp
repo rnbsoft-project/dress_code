@@ -70,29 +70,36 @@
       <div class="row">
         <div class="col-md-6 animate-box">
           <h3>Login To DRESS_CODE</h3>
-          <!-- 탁우근 -->
-          <div class="row form-group">
-            <div class="col-md-12">
-              <!-- <label for="email">Email</label> -->
-              <input type="text" id="userId" class="form-control"
-                         style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif;"
-                         placeholder="아이디를 입력해주세요">
-            </div>
-          </div>
 
-          <div class="row form-group">
-            <div class="col-md-12">
-              <!-- <label for="email">Email</label> -->
-              <input type="password" id="userPassword" class="form-control"
-                         style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif;"
-                         placeholder="비밀번호를 입력해주세요">
+          <!-- 유저 로그인 시작 -->
+          <form action="userLogin" method="post">
+            <div class="row form-group">
+              <div class="col-md-12">
+                <!-- <label for="email">Email</label> -->
+                <input type="text" id="requestUserId" name="requestUserId" class="form-control"
+                           style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif;"
+                           placeholder="아이디를 입력해주세요">
+              </div>
             </div>
-          </div>
 
-          <!-- 로그인 버튼 -->
-          <div class="form-group" style="float : right">
-            <button id="loginBtn" class="btn btn-primary">로그인</button>
-          </div>
+            <div class="row form-group">
+              <div class="col-md-12">
+                <!-- <label for="email">Email</label> -->
+                <input type="password" id="requestUserPassword" name="requestUserPassword" class="form-control"
+                           style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif;"
+                           placeholder="비밀번호를 입력해주세요">
+              </div>
+            </div>
+
+            <!-- 로그인 버튼 -->
+            <div class="form-group" style="float : right">
+              <button type="submit" class="btn btn-primary">로그인</button>
+            </div>
+          </form>
+          <%// 자바 영역
+               if(request.getAttribute("loginError") != null) {           %>
+                    <p>아이디 또는 비밀번호를 잘못 입력 되었습니다. 다시 로그인 해주세요.</p>
+          <%}%>
         </div>
       </div>
 
