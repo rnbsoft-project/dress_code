@@ -16,6 +16,7 @@ import java.util.Map;
 @Slf4j
 public class UserController {
 
+    // UserService Been을 찾아준다.
     @Autowired
     UserService userService;
 
@@ -38,14 +39,12 @@ public class UserController {
         userService.userSave(userDTO);
     }
 
-
     // 회원가입 유효성 체크
     @PostMapping("/userIdChk")
     @ResponseBody
     public int userJoinStatusChk(@RequestParam String userId) {
         return userService.userIdChk(userId);
     }
-
 
     // 유저 로그인
     @PostMapping("/userLogin")
@@ -75,7 +74,6 @@ public class UserController {
             return model;
         }
     }
-
 
     // 유저 로그아웃
     @PostMapping("/logout")

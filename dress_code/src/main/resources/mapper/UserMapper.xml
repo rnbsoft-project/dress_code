@@ -4,8 +4,11 @@
 
 <mapper namespace="com.rnbsoft.dress_code.mapper.UserMapper">
 
+        <!-- MyBatis 2차 캐시 사용  -->
+        <cache eviction="LRU" flushInterval="30000" size="512" readOnly="true"/>
+
         <!-- 유저 회원가입 -->
-        <insert id="userSave" parameterType="com.rnbsoft.dress_code.dto.UserDTO">
+        <insert id="userSave" parameterType="UserDTO" flushCache="true">
             INSERT INTO TB_USERS
             ( USER_NAME, USER_ID, USER_PASSWORD, USER_EMAIL, USER_MOV_TEL, USER_ADDR )
             VALUES( #{userName}, #{userId}, #{userPassword}, #{userEmail}, #{userMovTel}, #{userAddr} )
@@ -13,20 +16,19 @@
 
         <!-- 유저 로그인 중복성 체크 -->
         <select id="userIdChk" parameterType="string" resultType="int">
-            SELECT COUNT(USER_ID) FROM TB_USERS WHERE USER_ID = #{userId}
+            SELECT COUNT( USER_ID ) FROM TB_USERS WHERE USER_ID = #{userId}
         </select>
 
         <!-- 유저 로그인 ( 계정 확인 ) -->
         <select id="userLogin" parameterType="string" resultType="hashmap">
             SELECT USER_ID, USER_PASSWORD, USER_NAME
                FROM TB_USERS
-             WHERE USER_ID = #{userId}
-                  AND USER_PASSWORD = #{userPassword}
+             WHERE USER_ID = #{userId} AND USER_PASSWORD = #{userPassword}
         </select>
 
-        <!-- 모든 유저의 정보를 호출 -->
-        <select id="selectAllUsers" resultType="com.rnbsoft.dress_code.dto.UserDTO">
+        <!-- 모든 유저의 정보를 호출 ( JDBC 연결 테스트용 ) -->
+        <select id="selectAllUsers" resultType="UserDTO" flushCache="true">
             SELECT USER_NAME, USER_ID, USER_PASSWORD, USER_EMAIL, USER_ADDR
-            FROM TB_USERS
+               FROM TB_USERS
         </select>
 </mapper>
