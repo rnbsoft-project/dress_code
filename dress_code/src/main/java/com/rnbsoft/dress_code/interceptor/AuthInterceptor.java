@@ -16,10 +16,10 @@ public class AuthInterceptor implements HandlerInterceptor {
                                                   , Object handler) throws Exception
         {
             HttpSession session = request.getSession();
+
+            // 로그인이 되어있지 않을 경우, 접근을 제한하고 로그인 페이지로 이동
             if(session.getAttribute("userName") == null) {
-                    // 사용자가 로그인하지 않은 경우, 로그인 페이지로 리다이렉트
                     response.sendRedirect("/loginForm");
-                    // 로그인이 되어있지 않을 경우, 접근을 제한하고 로그인 페이지로 이동
                     return false;
             }
             // 로그인이 되어있다면 요청한 페이지에 접근

@@ -13,7 +13,7 @@ function saveUser() {
     $("#joinBtn").on("click", function() {
 
         var userInfo = {
-            userName        : $("#userName").val()               /* 유저 이름 */
+             userName        : $("#userName").val()               /* 유저 이름 */
             , userId              : $("#userId").val()                   /* 유저 아이디*/
             , userPassword : $("#userPassword").val()      /* 유저 비밀번호 */
             , userEmail        : $("#userEmail").val()              /* 유저 이메일 */
