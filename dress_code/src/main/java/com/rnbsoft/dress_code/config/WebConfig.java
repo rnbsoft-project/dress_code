@@ -19,7 +19,7 @@ public class WebConfig implements WebMvcConfigurer {
         @Override
         public void addInterceptors(InterceptorRegistry registry) {
                 registry.addInterceptor(authInterceptor)
-                        // AuthInterceptor를 등록하고, 특정 경로 /single ( 상품디테일 화면 ) 에서 인터셉터가 동작하도록 설정
+                        // AuthInterceptor를 등록하고, 특정 경로 /single ( 상품디테일 화면 )에서 인터셉터가 동작하도록 설정
                         .addPathPatterns("/single");
         }
 
@@ -35,6 +35,7 @@ public class WebConfig implements WebMvcConfigurer {
 
                         @Override
                         public void sessionDestroyed(HttpSessionEvent session) {
+                                // 세션 만료 시, 세션 삭제
                                 session.getSession().invalidate();
                         }
                 });

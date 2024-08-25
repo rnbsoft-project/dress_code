@@ -1,4 +1,8 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page session="true"
+                  isELIgnored="false"
+                  buffer="none"%>
+<%@ page trimDirectiveWhitespaces="true" %>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -29,7 +33,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-6 col-xs-6 text-center menu-1" style="width: 30%">
+            <div class="col-md-6 col-xs-6 text-center menu-1" style="width: 20%">
                 <ul>
                     <li class="has-dropdown">
                         <a href="product"><span style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif; font-size: 20px;">상품 목록</span></a>
@@ -41,7 +45,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-3 col-xs-4 text-right hidden-xs menu-2" style="width: 30%">
+            <div class="col-md-3 col-xs-4 text-right hidden-xs menu-2" style="width: 40%">
                 <ul>
                     <li class="search">
                         <div class="input-group">

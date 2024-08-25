@@ -22,35 +22,31 @@ public class UserController {
 
     // 유저 로그인화면 이동
     @GetMapping("/loginForm")
-    public String getLogin() {
-        return "loginForm";
-    }
+    public String getLogin()
+    { return "loginForm"; }
 
     // 유저 회원가입 화면 이동
     @GetMapping("/join")
-    public String getJoin() {
-        return "join";
-    }
+    public String getJoin()
+    { return "join"; }
 
     // 유저 회원가입
     @PostMapping("/userSave")
     @ResponseBody
-    public void userSave(@RequestBody UserDTO userDTO) {
-        userService.userSave(userDTO);
-    }
+    public void userSave(@RequestBody UserDTO userDTO)
+    { userService.userSave(userDTO); }
 
     // 회원가입 유효성 체크
     @PostMapping("/userIdChk")
     @ResponseBody
-    public int userJoinStatusChk(@RequestParam String userId) {
-        return userService.userIdChk(userId);
-    }
+    public int userJoinStatusChk(@RequestParam String userId)
+    { return userService.userIdChk(userId); }
 
     // 유저 로그인
     @PostMapping("/userLogin")
     @ResponseBody
     public ModelAndView userLogin(@RequestParam(value ="requestUserId", required = false) String requestUserId,
-                                                            @RequestParam("requestUserPassword") String requestUserPassword,
+                                                            @RequestParam(value = "requestUserPassword", required = false) String requestUserPassword,
                                                             HttpSession session)
     {
         // DB에 유저 ID로 가입된 계정이 있는지 확인
