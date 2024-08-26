@@ -4,11 +4,13 @@ import com.rnbsoft.dress_code.dto.UserDTO;
 import com.rnbsoft.dress_code.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Map;
 
 @Service
+@Transactional
 public class UserService {
 
     @Autowired
