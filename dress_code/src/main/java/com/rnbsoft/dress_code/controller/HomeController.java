@@ -9,7 +9,6 @@ public class HomeController {
         @GetMapping("/")
         public String getIndex()
         {
-        	System.out.println("메인화면 이동");
         	return "home"; 
         }
 }
