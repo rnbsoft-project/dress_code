@@ -8,5 +8,8 @@ public class HomeController {
 
         @GetMapping("/")
         public String getIndex()
-        { return "home"; }
+        {
+        	System.out.println("메인화면 이동");
+        	return "home"; 
+        }
 }
