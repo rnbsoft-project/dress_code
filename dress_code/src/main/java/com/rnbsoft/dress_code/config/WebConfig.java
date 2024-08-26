@@ -30,7 +30,7 @@ public class WebConfig implements WebMvcConfigurer {
                         @Override
                         public void sessionCreated(HttpSessionEvent session) {
                                 // 세션이 생성 시간 10초 ( 테스트용 )
-                                session.getSession().setMaxInactiveInterval(10);
+                                session.getSession().setMaxInactiveInterval(1800);
                         }
 
                         @Override
