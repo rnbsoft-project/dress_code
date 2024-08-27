@@ -1,7 +1,6 @@
 package com.rnbsoft.dress_code.dto;
 
 import lombok.*;
-import org.springframework.beans.factory.annotation.Value;
 
 @NoArgsConstructor
 @AllArgsConstructor

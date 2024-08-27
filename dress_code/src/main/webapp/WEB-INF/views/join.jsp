@@ -48,6 +48,7 @@
 <div class="fh5co-loader"></div>
 
 <div id="page">
+    <!-- headerNav.jsp의 include해서 가져온다. ( 액션태그 사용 ) -->
     <jsp:include page="headerNav.jsp" flush="false"/>
     <header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(/resources/images/img_bg_2.jpg);">
         <div class="overlay"></div>

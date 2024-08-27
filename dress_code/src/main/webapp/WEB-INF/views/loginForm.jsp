@@ -75,7 +75,6 @@
           <form action="userLogin" method="post">
             <div class="row form-group">
               <div class="col-md-12">
-                <!-- <label for="email">Email</label> -->
                 <input type="text" id="requestUserId" name="requestUserId" class="form-control"
                            style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif;"
                            placeholder="아이디를 입력해주세요">
