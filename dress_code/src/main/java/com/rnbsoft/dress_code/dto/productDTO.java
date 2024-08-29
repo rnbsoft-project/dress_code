@@ -17,5 +17,6 @@ public class productDTO {
 	private String prodNum; //상품번호
 	private String prodName; //상품이름
 	private String prodCatgr; //상품카테고리
+	private String prodImgUrl; //상품이미지url
 
 }
