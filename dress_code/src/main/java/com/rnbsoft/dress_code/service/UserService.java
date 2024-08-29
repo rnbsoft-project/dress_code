@@ -30,6 +30,11 @@ public class UserService {
         return userMap;
     }
 
+    // 카카오 로그인
+    public void kakaoSave(UserDTO userDTO) {
+        userMapper.kakaoSave(userDTO);
+    }
+
     // 모든 유저 정보 조회 ( JDBC 연결 테스트용 메소드 )
     public List<UserDTO> selectAllUsers()
     { return userMapper.selectAllUsers(); }

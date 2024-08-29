@@ -92,11 +92,17 @@
 
             <!-- 로그인 버튼 -->
             <div class="form-group" style="float : right">
-              <button type="submit" class="btn btn-primary">로그인</button>
+              <button type="submit" class="btn btn-primary" style="height: 45px">로그인</button>
             </div>
           </form>
+          <div class="form-group" style="float : right; padding-right: 10px">
+            <!-- 카카오 로그인 -->
+            <form action="/kakaoLogin" method="post">
+              <button type="submit" style="background-image:url('/resources/images/kakao_login.png'); width: 90px; height: 45px; solid-color: yellow"></button>
+            </form>
+          </div>
           <%// 자바 영역
-               if(request.getAttribute("loginError") != null) {           %>
+               if(request.getAttribute("loginError") != null) { %>
                     <p>아이디 또는 비밀번호를 잘못 입력 되었습니다. 다시 로그인 해주세요.</p>
           <%}%>
         </div>

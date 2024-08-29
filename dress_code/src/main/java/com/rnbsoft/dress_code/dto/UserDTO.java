@@ -14,4 +14,5 @@ public class UserDTO {
     private String userEmail;             // 이메일
     private String userMovTel;         // 전화번호
     private String userAddr;             // 주소
+    private String socialYn;               // 소셜로그인 여부
 }

@@ -15,7 +15,6 @@ function saveUser() {
 
         // 유효성 검증이 통과될 시, 회원가입 진행
        if ( userEmptyInfo() ) {
-
            var userInfo = {
                  userName        : $("#userName").val()            /* 유저 이름 */
                , userId              : $("#userId").val()                   /* 유저 아이디*/

@@ -19,4 +19,7 @@ public interface UserMapper {
 
     // 유저 로그인
     Map<UserDTO, String> userLogin(String userId, String userPassword );
+
+    // 카카오 로그인
+    void kakaoSave(UserDTO userDTO);
 }

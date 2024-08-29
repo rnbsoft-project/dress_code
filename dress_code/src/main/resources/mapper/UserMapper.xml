@@ -14,6 +14,13 @@
             VALUES( #{userName}, #{userId}, #{userPassword}, #{userEmail}, #{userMovTel}, #{userAddr} )
         </insert>
 
+        <!-- 카카오 로그인 회원가입 -->
+        <insert id="kakaoSave" parameterType="UserDTO" flushCache="true">
+            INSERT INTO TB_USERS
+            ( USER_NAME, USER_ID, USER_EMAIL, SOCIAL_YN )
+            VALUES( #{userName}, #{userId}, 'kakaoLogin@rnbsoft.com', 'Y' )
+        </insert>
+
         <!-- 유저 로그인 중복성 체크 -->
         <select id="userIdChk" parameterType="string" resultType="int">
             SELECT COUNT( USER_ID ) FROM TB_USERS WHERE USER_ID = #{userId}
