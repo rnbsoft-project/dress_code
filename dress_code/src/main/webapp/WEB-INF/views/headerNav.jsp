@@ -38,9 +38,9 @@
                         <li class="has-dropdown">
                             <a href="product"><span style="font-family: 'Malgun Gothic', '맑은 고딕', 'Arial', sans-serif; font-size: 20px;">상품 목록</span></a>
                             <ul class="dropdown">
-                                <li><a href="#">상의</a></li>
-                                <li><a href="#">하의</a></li>
-                                <li><a href="#">신발</a></li>
+                                <li><a href="productUP">상의</a></li>
+                                <li><a href="productBOTTOMS">하의</a></li>
+                                <li><a href="productShoes">신발</a></li>
                             </ul>
                         </li>
                     </ul>

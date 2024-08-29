@@ -76,8 +76,8 @@
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1>Product</h1>
-							<h2>All Product of Dresscode</h2>
+							<h1>BOTTOMS</h1>
+							<h2>PRODUCTS OF DRESS_CODE</h2>
 						</div>
 					</div>
 				</div>
@@ -90,7 +90,7 @@
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<span>Cool Stuff</span>
-					<h2>Products.</h2>
+					<h2>BOTTOMS Products.</h2>
 					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
 				</div>
 			</div>
