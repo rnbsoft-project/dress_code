@@ -162,6 +162,7 @@ public class UserController {
 
             // 사용자 정보를 모델에 추가하여 JSP 페이지에서 사용할 수 있도록 합니다.
             session.setAttribute("userName", userName);
+            session.setAttribute("userId", userId);
             model.addAttribute("userName", userDTO.getUserName());
 
             // 홈 페이지로 리다이렉트합니다. 로그인 후 사용자 정보를 보여줄 페이지로 이동합니다.
@@ -181,15 +182,20 @@ public class UserController {
     public String userLogout(HttpSession session) {
 
         // 카카오 로그아웃
-        // 세션에 담긴 정보 정리
-        session.invalidate();
+        String userId = (String)session.getAttribute("userId");
+        if(userId == null) {
+            // 세션에 담긴 정보 정리
+            session.invalidate();
+            return "redirect:" + "/loginForm";
+        }else {
+            // 카카오 로그아웃 API 호출
+            String kakaoLogoutUrl = "https://kauth.kakao.com/oauth/logout"
+                    + "?client_id=" + kakaoRestApiKey
+                    + "&logout_redirect_uri=" + kakaoLogoutRedirectUri;
 
-        // 카카오 로그아웃 API 호출
-        String kakaoLogoutUrl = "https://kauth.kakao.com/oauth/logout"
-                                               + "?client_id=" + kakaoRestApiKey
-                                               + "&logout_redirect_uri=" + kakaoLogoutRedirectUri;
+            return "redirect:" + kakaoLogoutUrl;
+        }
 
-        return "redirect:" + kakaoLogoutUrl;
     }
 
     @GetMapping("/kakaoLogout")

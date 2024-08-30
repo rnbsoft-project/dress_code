@@ -22,4 +22,7 @@ public interface UserMapper {
 
     // 카카오 로그인
     void kakaoSave(UserDTO userDTO);
+
+    // 소셜 로그인 여부 확인
+    String kakaoSocialYn(String userId);
 }

@@ -98,7 +98,7 @@
           <div class="form-group" style="float : right; padding-right: 10px">
             <!-- 카카오 로그인 -->
             <form action="/kakaoLogin" method="post">
-              <button type="submit" style="background-image:url('/resources/images/kakao_login.png'); width: 90px; height: 45px; solid-color: yellow"></button>
+              <button type="submit" style="background-image:url(/resources/images/kakao_login.png); width: 90px; height: 45px; solid-color: yellow"></button>
             </form>
           </div>
           <%// 자바 영역

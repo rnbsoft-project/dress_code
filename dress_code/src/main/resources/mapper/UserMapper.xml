@@ -33,6 +33,13 @@
              WHERE USER_ID = #{userId} AND USER_PASSWORD = #{userPassword}
         </select>
 
+        <!-- 소셜 로그인 여부 확인 -->
+        <select id="kakaoSocialYn" parameterType="string" resultType="string">
+            SELECT USER_ID, SOCIAL_YN
+               FROM TB_USERS
+             WHERE USER_ID = #{userId}
+        </select>
+
         <!-- 모든 유저의 정보를 호출 ( JDBC 연결 테스트용 ) -->
         <select id="selectAllUsers" resultType="UserDTO" flushCache="true">
             SELECT USER_NAME, USER_ID, USER_PASSWORD, USER_EMAIL, USER_ADDR

@@ -35,6 +35,11 @@ public class UserService {
         userMapper.kakaoSave(userDTO);
     }
 
+    // 카카오 소셜 로그인 여부 확인
+    public String kakaoSocialYn(String userId) {
+        return userMapper.kakaoSocialYn(userId);
+    }
+
     // 모든 유저 정보 조회 ( JDBC 연결 테스트용 메소드 )
     public List<UserDTO> selectAllUsers()
     { return userMapper.selectAllUsers(); }
