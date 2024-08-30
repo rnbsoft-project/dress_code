@@ -192,7 +192,8 @@ public class UserController {
             String kakaoLogoutUrl = "https://kauth.kakao.com/oauth/logout"
                     + "?client_id=" + kakaoRestApiKey
                     + "&logout_redirect_uri=" + kakaoLogoutRedirectUri;
-
+                    // 세션에 담긴 정보 정리
+                    session.invalidate();
             return "redirect:" + kakaoLogoutUrl;
         }
 
